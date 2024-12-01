@@ -14,11 +14,11 @@ def brut(input_data: Any) -> int:
 
 
 def solve(input_data) -> int:
-    answer = input_data
-    return answer
+    return brut(input_data)
 
 
 if __name__ == "__main__":
+    #  config.EXAMPLE_FILE = "example2"
     config.GET_DATA = get_data
     config.EXAMPLE_SOLUTION = None
     config.SOLUTION = None

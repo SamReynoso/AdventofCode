@@ -44,7 +44,7 @@ pfc () {
             pfc.cd
             ;;
         *)
-            echo "Unknown command: $cmd"
+            echo "Unknown command: '$cmd'"
             ;;
     esac
 }
@@ -52,12 +52,3 @@ pfc () {
 
 export -f pfc
 export PYTHONPATH="$PYTHONPATH:$PRJ_ROOT/lib/"
-
-RED_DOLLAR="\[\e[31;2m\]\$\[\e[0m\]"
-GREEN_ARROW="\[\e[32;2m\]→\[\e[0m\]"
-NEW_PROMP=" $RED_DOLLAR $GREEN_ARROW "
-
-if [[ "$PS1" != "$NEW_PROMP" ]]; then
-    export PS1="$NEW_PROMP"
-fi
-
