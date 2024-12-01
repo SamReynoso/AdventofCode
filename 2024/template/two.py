@@ -3,9 +3,11 @@ from typing import Any
 from advent import utils
 from advent import config
 
+from one import get_data
 
-def get_data(input_lines: list[str]) -> Any:
-    return input_lines
+
+#  def get_data(input_lines: list[str]) -> Any:
+#      return input_lines
 
 
 def brut(input_data: Any) -> int:
