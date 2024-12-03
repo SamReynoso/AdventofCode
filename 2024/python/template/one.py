@@ -4,8 +4,8 @@ from advent import utils
 from advent import config
 
 
-def get_data(input_lines: list[str]) -> Any:
-    return input_lines
+def get_data(input_str: str) -> Any:
+    return input_str
 
 
 def brut(input_data: Any) -> int:

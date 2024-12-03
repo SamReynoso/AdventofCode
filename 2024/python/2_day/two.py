@@ -5,7 +5,9 @@ from advent import config
 from copy import copy
 
 
-def get_data(input_lines: list[str]) -> list[int]:
+def get_data(input_str: str) -> list[int]:
+    input_lines = input_str.split("\n")
+    input_lines.pop()
     new = []
     for line in input_lines:
         new.append([int(x) for x in line.split(" ")])

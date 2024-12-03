@@ -1,3 +1,4 @@
+from typing import Any
 
 
 EXAMPLE_FILE = "example"
@@ -6,7 +7,7 @@ EXAMPLE_SOLUTION = None
 SOLUTION = None
 
 
-def get_data(input_lines: list[str]):
+def get_data(input_lines: str) -> Any:
     return input_lines
 
 

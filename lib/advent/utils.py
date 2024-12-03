@@ -21,33 +21,24 @@ class Timer:
         print(f"        Execution time: {self.milliseconds:.2f}ms")
 
 
-def read_input_from_file(file_name):
+def read_input_from_file(file_name) -> str:
     try:
         with open(file_name) as f:
-            input_lines = f.read().split("\n")
+            input_str = f.read()
     except FileNotFoundError:
         AdventException.InputNotFound(file_name)
         exit(1)
     try:
-        assert input_lines
+        assert input_str and len(input_str) > 0
     except AssertionError:
         AdventException.InputEmpty(file_name)
         exit(1)
-    while input_lines[-1] == "":
-        input_lines.pop()
-        if not input_lines:
-            break
-    try:
-        assert len(input_lines) > 0
-    except AssertionError:
-        AdventException.InputEmpty(file_name)
-        exit(1)
-    return input_lines
+    return input_str
 
 
 def get_data(file_name):
-    input_lines = read_input_from_file(file_name)
-    return config.GET_DATA(input_lines)
+    input_str = read_input_from_file(file_name)
+    return config.GET_DATA(input_str)
 
 
 def assert_solution(solution):

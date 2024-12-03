@@ -2,3 +2,6 @@
     1_day
         one: pass
         two: pass
+    2_day
+        one: pass
+        two: pass

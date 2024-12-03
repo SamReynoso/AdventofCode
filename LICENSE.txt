@@ -1,0 +1,38 @@
+The Clone-But-Don't-Read Public License (CBDRPL)
+
+Version 1.0, December 2024
+
+This license applies to all files in this repository unless otherwise stated.
+Permissions:
+
+    Cloning
+    You are granted unrestricted permission to clone this repository. Clone it 
+    as much as your disk space allows.
+
+    Forking
+    Forking is also allowed.
+
+    Sharing
+    Feel free.
+
+Restrictions:
+
+    No Reading
+    You may NOT, under any circumstances, read the contents of the files in 
+    this repository.
+
+    No Execution
+    While you can clone this code, running it is a strict no-go.
+
+    No Reverse Engineering
+    Attempting to decipher the contents of this code by any means (including 
+    machine learning) is explicitly prohibited.
+
+Compliance:
+
+If you violate any of the above restrictions, you must make best efforts to
+forget what you have seen. This includes, but is not limited to, memory wipes,
+hypnosis, and brain surgery.
+
+By cloning this repository, you agree to abide by the Clone-But-Don't-Read 
+Public License.

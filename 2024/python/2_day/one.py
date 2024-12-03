@@ -4,7 +4,9 @@ from advent import utils
 from advent import config
 
 
-def get_data(input_lines: list[str]) -> list[int]:
+def get_data(input_str: str) -> list[int]:
+    input_lines = input_str.split("\n")
+    input_lines.pop()
     new = []
     for line in input_lines:
         new.append([int(x) for x in line.split(" ")])
@@ -12,14 +14,14 @@ def get_data(input_lines: list[str]) -> list[int]:
 
 
 def all_up(line: list[int]) -> bool:
-    for i in range(1, len(line)):
+    for i in range(len(line) - 1):
         if line[i] >= line[i + 1]:
             return False
     return True
 
 
 def all_down(line: list[int]) -> bool:
-    for i in range(1, len(line)):
+    for i in range(len(line) - 1):
         if line[i] <= line[i + 1]:
             return False
     return True
@@ -33,12 +35,9 @@ def zags(line: list[int]) -> bool:
         if all_up(line):
             return False
         return True
-    elif start < 0:
-        if all_down(line):
-            return False
-        return True
-    print("bug in zags")
-    exit(1)
+    if all_down(line):
+        return False
+    return True
 
 
 def diff_to_big(line: list[int]) -> bool:
@@ -57,7 +56,6 @@ def brut(input_data: Any) -> int:
             continue
         if diff_to_big(line):
             answer -= 1
-    print(answer)
     return answer
 
 
@@ -70,7 +68,6 @@ if __name__ == "__main__":
     config.GET_DATA = get_data
     config.EXAMPLE_SOLUTION = 2
     config.SOLUTION = 631
-    print(config.EXAMPLE_SOLUTION, "example")
     utils.test_solve(solve)
     utils.brut_solve(brut)
     utils.run(solve)

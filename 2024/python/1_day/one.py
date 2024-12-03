@@ -6,7 +6,8 @@ from advent import utils
 from advent import config
 
 
-def get_data(input_lines: list[str]):
+def get_data(input_str: str):
+    input_lines = input_str.split("\n")
     left = []
     right = []
     for line in input_lines:
